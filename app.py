@@ -44,13 +44,3 @@ def index():
             status_class = "success"
         else:
             message = "Login Gagal! Kredensial tidak valid."
-            status_class = "danger"
-
-    return render_template(
-        "index.html", message=message, status_class=status_class
-    )
-
-
-if __name__ == "__main__":
-    init_db()
-    app.run(host="0.0.0.0", port=5000)  # nosemgrep
